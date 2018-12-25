@@ -1,10 +1,12 @@
 package com.semanticsquare.thrillio.entities;
 
-public class Bookmark {
+public abstract class Bookmark {
 	private long id;
 	private String title;
 	private String profileUrl;
-
+	
+	public abstract boolean isKidFriendly();
+	
 	public long getId() {
 		return id;
 	}
