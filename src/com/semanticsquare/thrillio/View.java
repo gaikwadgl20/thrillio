@@ -3,6 +3,8 @@ package com.semanticsquare.thrillio;
 import com.semanticsquare.thrillio.controller.BookmarkController;
 import com.semanticsquare.thrillio.entities.Bookmark;
 import com.semanticsquare.thrillio.entities.User;
+import com.semanticsquare.thrillio.entities.WebLink;
+import com.semanticsquare.thrillio.managers.BookmarkManager;
 
 public class View {
 	public static void bookmark(User user, Bookmark[][] bookmarks ) {
@@ -14,7 +16,13 @@ public class View {
 			Bookmark bookmark = bookmarks[typeOffset][bookmarkOffset];
 			
 			BookmarkController.getInstance().saveUserBookmark(user ,bookmark);
-			System.out.println(bookmark);
+			//System.out.println(bookmark);
+			
+			
+			WebLink weblink =	BookmarkManager.getInstance().createWebLink(
+						"http://www.javaworld.com/article/2072759/core-java/taming-URL--part-2.html",
+						"http://www.javaworld.com", 2000, "Taming Tiger, Part 2");
+				//System.out.println(weblink); 
 		}
 	}
 }

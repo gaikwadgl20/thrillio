@@ -54,5 +54,12 @@ public class Movie extends Bookmark {
 		return "Movie [releaseYear=" + releaseYear + ", cast=" + Arrays.toString(cast) + ", director="
 				+ Arrays.toString(director) + ", generics=" + generics + ", imdbRating=" + imdbRating + "]";
 	}
+	
+	@Override
+	public boolean isKidFriendly() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
 
 }
