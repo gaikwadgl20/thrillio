@@ -1,10 +1,10 @@
 package com.semanticsquare.thrillio.managers;
 
 import com.semanticsquare.thrillio.dao.BookmarkDao;
-import com.semanticsquare.thrillio.entities.Book;
-import com.semanticsquare.thrillio.entities.Bookmark;
-import com.semanticsquare.thrillio.entities.Movie;
-import com.semanticsquare.thrillio.entities.WebLink;
+import com.semanticsquare.thrillio.entity.Book;
+import com.semanticsquare.thrillio.entity.Bookmark;
+import com.semanticsquare.thrillio.entity.Movie;
+import com.semanticsquare.thrillio.entity.WebLink;
 
 public class BookmarkManager {
 	private static BookmarkManager instance = new BookmarkManager();

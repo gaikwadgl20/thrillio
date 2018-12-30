@@ -1,9 +1,9 @@
 package com.semanticsquare.thrillio.managers;
 
 import com.semanticsquare.thrillio.dao.UserDao;
-import com.semanticsquare.thrillio.entities.Bookmark;
-import com.semanticsquare.thrillio.entities.User;
-import com.semanticsquare.thrillio.entities.UserBookmark;
+import com.semanticsquare.thrillio.entity.Bookmark;
+import com.semanticsquare.thrillio.entity.User;
+import com.semanticsquare.thrillio.entity.UserBookmark;
 
 public class UserManager {
 	private static UserManager instance = new UserManager();

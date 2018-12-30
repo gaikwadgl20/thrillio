@@ -1,7 +1,7 @@
 package com.semanticsquare.thrillio.controller;
 
-import com.semanticsquare.thrillio.entities.Bookmark;
-import com.semanticsquare.thrillio.entities.User;
+import com.semanticsquare.thrillio.entity.Bookmark;
+import com.semanticsquare.thrillio.entity.User;
 import com.semanticsquare.thrillio.managers.UserManager;
 
 public class BookmarkController {

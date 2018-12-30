@@ -2,9 +2,9 @@ package com.semanticsquare.thrillio;
 
 import com.semanticsquare.thrillio.constants.BookGenre;
 import com.semanticsquare.thrillio.constants.MovieGenre;
-import com.semanticsquare.thrillio.entities.Bookmark;
-import com.semanticsquare.thrillio.entities.User;
-import com.semanticsquare.thrillio.entities.UserBookmark;
+import com.semanticsquare.thrillio.entity.Bookmark;
+import com.semanticsquare.thrillio.entity.User;
+import com.semanticsquare.thrillio.entity.UserBookmark;
 import com.semanticsquare.thrillio.managers.BookmarkManager;
 import com.semanticsquare.thrillio.managers.UserManager;
 

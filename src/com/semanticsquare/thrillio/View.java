@@ -3,9 +3,9 @@ package com.semanticsquare.thrillio;
 import com.semanticsquare.thrillio.constants.KidFriendlyStatus;
 import com.semanticsquare.thrillio.constants.UserType;
 import com.semanticsquare.thrillio.controller.BookmarkController;
-import com.semanticsquare.thrillio.entities.Bookmark;
-import com.semanticsquare.thrillio.entities.User;
-import com.semanticsquare.thrillio.entities.WebLink;
+import com.semanticsquare.thrillio.entity.Bookmark;
+import com.semanticsquare.thrillio.entity.User;
+import com.semanticsquare.thrillio.entity.WebLink;
 import com.semanticsquare.thrillio.managers.BookmarkManager;
 
 public class View {
@@ -45,10 +45,10 @@ public class View {
 					if (user.getUserType().equals(UserType.EDITOR)
 							|| user.getUserType().equals(UserType.CHIEF_EDITOR)) {
 						if (bookmark.isKidFriendly()
-								&& bookmark.getKidFriendlyStatus().equals(KidFriendlyStatus.UNKNOWN)) {
+								&& bookmark.getIsKidFriendlyStatus().equals(KidFriendlyStatus.UNKNOWN)) {
 							String isKindfriendlyStatus= getIsKidFriendlyDecision(bookmark);
 							if(! (isKindfriendlyStatus.equals(KidFriendlyStatus.UNKNOWN))) {
-								bookmark.setKidFriendlyStatus(isKindfriendlyStatus);
+								bookmark.setIsKidFriendlyStatus(isKindfriendlyStatus);
 								System.out.println("Kid Friendly Status : " + isKindfriendlyStatus + "," + bookmark);
 							}
 						}
