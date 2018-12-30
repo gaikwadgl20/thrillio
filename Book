@@ -1,5 +1,42 @@
 4000	Walden	1854	Wilder Publications	Henry David Thoreau	Philosophy	4.3	unknown
 4001	Self-Reliance and Other Essays	1993	Dover Publications	Ralph Waldo Emerson	Philosophy	4.5	unknown
 4002	Light From Many Lamps	1988	Touchstone	Lillian Eichler Watson	Philosophy	5.0	unknown
-4003	Head First Design Patterns	2004	O'Reilly Media	Eric Freeman,Bert Bates,Kathy Sierra,Elisabeth Robson	Technical	4.5	unknown
-4004	Effective Java Programming Language Guide	2007	Prentice Hall	Joshua Bloch	Technical	4.9	unknown
+4003	Head First Design Patterns	2004	O'Reilly Media	Eric Freeman,Bert Bates,Kathy Sierra,Elisabeth Robson	Philosophy	4.5	unknown
+4004	Effective Java Programming Language Guide	2007	Prentice Hall	Joshua Bloch	Philosophy	4.9	unknown
+
+
+package com.semanticsquare.thrillio.entities;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import com.semanticsquare.thrillio.managers.BookmarkManager;
+import com.semanticsquare.thrillio.entities.*;
+
+class WebLinkTest {
+	@Test
+	void testIsKidFriendly() {
+		
+		// Test 1 : porn in URL -->  False
+		
+	WebLink weblink =	BookmarkManager.getInstance().createWebLink(
+				"http://www.javaworld.com/article/2072759/core-java/taming-Porn-URL--part-2.html",
+				"http://www.javaworld.com", 2000, "Taming Tiger, Part 2");
+		System.out.println(weblink); 
+		boolean testIsKidFriendlyEligible =  weblink.isKidFriendly();
+		
+		assertfalse("For Porn in URl",testIsKidFriendlyEligible )
+		
+		System.out.println("Test "+test);
+		// Test 2 : porn in title -->  False
+		
+		// Test 3 : adult in host --> False
+		
+		// Test 4 : adult in url, but not in host part --> True
+		
+		// Test 5 : Adult in title Only --> True
+		fail("Not yet implemented");
+	}
+
+}
