@@ -2,9 +2,12 @@ package com.semanticsquare.thrillio.entity;
 
 import java.util.Arrays;
 
-import com.semanticsquare.thrillio.constants.BookGenre;
+import org.apache.commons.lang3.*;
 
-public class Book extends Bookmark {
+import com.semanticsquare.thrillio.constants.BookGenre;
+import com.semanticsquare.thrillio.partner.Shareable;
+
+public class Book extends Bookmark implements Shareable {
 	private int publicationYear;
 
 	private String publisher;
@@ -65,6 +68,19 @@ public class Book extends Bookmark {
 			return false;
 		}
 		return true;
+	}
+
+	@Override
+	public String getItemData() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("<item>");
+			builder.append("<type>Book</type>");
+			builder.append("<title>").append(getTitle()).append("</title>");
+			builder.append("<publisher>").append(getPublisher()).append("</publisher>");
+			builder.append("<publisherYear>").append(getPublicationYear()).append("</publisherYear>");
+			builder.append("<publisher>").append((StringUtils.join(getAuthors(),",").append("</publisher>");
+		builder.append("</item>");
+		return null;
 	}
 
 

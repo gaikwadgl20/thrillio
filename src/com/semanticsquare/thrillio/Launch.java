@@ -20,19 +20,19 @@ public class Launch {
 		//printBookmarkData();
 		}
 
-	private static void printUserData() {
+	/*private static void printUserData() {
 		for (User user : users) {
 			System.out.println(user);
 		}
-	}
+	}*/
 
-	private static void printBookmarkData() {
+	/*private static void printBookmarkData() {
 		for (Bookmark[] bookmarkList : bookmarks) {
 			for (Bookmark bookmark : bookmarkList) {
 				System.out.println(bookmark);
 			}
 		}
-	}
+	}*/
 	
 	private static void start() {
 		System.out.println("\n 2. Start Browsing...");
